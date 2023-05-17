@@ -76,9 +76,9 @@ def otpGen(vid):
     print('otp sent')
     phoneNum=getNum(vid)
     print(phoneNum)
-    client = Client("ACdf87f247dd7ddfc794111783f7a10856", "126ca76ab9babc04aae4d42668a392b4")
-    client.messages.create(to =("+91"+str(phoneNum)),
-                        from_ ="+15076046997",
+    client = Client("[Credential]", "[AuthToken]")
+    client.messages.create(to =("[your_number]"),
+                        from_ ="[twilio_number]",
                         body = genOtp)
     return genOtp
 
